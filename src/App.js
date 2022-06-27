@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Header from "./Header/Header";
+import Body from "./Body/Body";
+import AddProduct from "./Addproduct/AddProduct";
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+
+  state = {
+    products: []
+  }
+
+  submitChange = () => {
+    const productArr = JSON.parse(localStorage.getItem('productObj'));
+    this.setState({
+      products: productArr
+    })
+  }
+
+  deleteProduct = (ind) => {
+    const productArr = JSON.parse(localStorage.getItem('productObj'));
+    productArr.splice(ind, 1);
+    localStorage.setItem('productObj', JSON.stringify(productArr));
+    this.setState({
+      products: productArr
+    })
+  }
+
+  componentDidMount() {
+    const productArr = JSON.parse(localStorage.getItem('productObj'));
+    this.setState({
+      products: productArr
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <AddProduct submitChange={this.submitChange} />
+        <Header />
+        <div className='hide'>
+          <Body product={this.state.products} deleteProduct={this.deleteProduct} />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

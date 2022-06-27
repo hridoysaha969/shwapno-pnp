@@ -1,0 +1,106 @@
+.popup{
+    width: 100%;
+    height: 90%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-radius: 0.6rem 0.6rem 0 0!important;
+    -webkit-border-radius: 0.6rem 0.6rem 0 0!important;
+    -moz-border-radius: 0.6rem 0.6rem 0 0!important;
+    -ms-border-radius: 0.6rem 0.6rem 0 0!important;
+    -o-border-radius: 0.6rem 0.6rem 0 0!important;
+    background: rgb(255, 255, 255);
+    z-index: 20;
+    transition: all ease-in-out 0.4s;
+    -webkit-transition: all ease-in-out 0.4s;
+    -moz-transition: all ease-in-out 0.4s;
+    -ms-transition: all ease-in-out 0.4s;
+    -o-transition: all ease-in-out 0.4s;
+    color: #000;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.6);
+}
+
+.popup .times{
+    position: absolute;
+    top: 0.6rem;
+    right: 1rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.popup form{
+    margin-top: 4rem;
+    padding: 0 1rem;
+}
+.popup form input{
+    padding: 0.4rem;
+    border: 1px solid #000;
+    outline: none;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+}
+input.is_invalid{
+    border: 2px solid #ff0000!important;
+}
+.popup .wrapper{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-self: center;
+    max-width: fit-content;
+    margin-top: 1rem;
+}
+.wrapper label{
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+.wrapper select {
+    margin-bottom: 1rem;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+
+}
+.wrapper select.is_invalid{
+    border: 2px solid #ff0000!important;
+}
+.popup form .positions .container{
+    font-size: 1.2rem;
+}
+.popup form .positions input{
+    width: 3rem;
+}
+.btn_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup .submit_btn{
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    width: 50%;
+    margin-top: 1rem;
+}
+
+.popup .submit_btn:hover{
+    background: #f31515;
+    color: #fff;
+}
+
+.invalid_feadback{
+    margin-top: -1rem;
+    font-size: 0.8rem;
+    color: #ff0000;
+}

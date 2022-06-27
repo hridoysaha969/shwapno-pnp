@@ -1,0 +1,40 @@
+.top_header{
+    background: #f31515;
+    padding: 0.3rem 0;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: 100px;
+}
+.credit{
+    color: #fff;
+    text-align: right;
+}
+.credit h3{
+    font-size: 1rem;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.credit span{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 380px) {
+    .logo img{
+        width: 80px;
+    }
+    .credit h3{
+        font-size: 0.85rem;
+        margin-bottom: 0;
+        font-weight: 600;
+    }
+    .credit span{
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+}
