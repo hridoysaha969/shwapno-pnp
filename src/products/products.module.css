@@ -33,13 +33,24 @@
     font-size: 1rem;
     margin-right: 1rem!important;
 }
+.single_product_exp p{
+    font-size: 1rem;
+    margin-right: 1rem!important;
+}
 .single_product p:last-child{
+    margin-right: 0!important;
+    font-weight: bold;
+}
+.single_product_exp p:last-child{
     margin-right: 0!important;
     font-weight: bold;
 }
 
 @media screen and (max-width: 420px) {
     .single_product p{
+        font-size: 0.7rem;
+    }
+    .single_product_exp p{
         font-size: 0.7rem;
     }
 }
