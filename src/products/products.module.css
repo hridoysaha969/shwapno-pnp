@@ -45,6 +45,14 @@
     margin-right: 0!important;
     font-weight: bold;
 }
+.single_product_exp p:last-child {
+    animation: none;
+    -webkit-animation: none;
+}
+.single_product_exp p:first-child {
+    animation: none;
+    -webkit-animation: none;
+}
 
 @media screen and (max-width: 420px) {
     .single_product p{

@@ -102,14 +102,16 @@ class Popup extends Component {
                         <label>Category</label>
                         <div>
                             <select name='category' className={error.category && classes.is_invalid} value={category} onChange={this.handleChange}>
-                                <option>Select</option>
+                                <option value=''>Select</option>
                                 <option value='Frozen'>Frozen</option>
+                                <option value='Chocolate'>Chocolate</option>
                                 <option value='Tea/Coffee'>Tea/Coffee</option>
                                 <option value='Baby Care'>Baby Care</option>
                                 <option value='Personal Care'>Personal Care</option>
+                                <option value='Detergent and Soap'>Detergent and Soap</option>
                                 <option value='Hand Wash and Sanitizer'>Hand Wash and Sanitizer</option>
                                 <option value='Package Food'>Packageg Food</option>
-                                <option value='Chocolate'>Chocolate</option>
+                                <option value='Commodity'>Commodity</option>
                                 <option value='Beverage'>Beverage</option>
                             </select>
                             {error.category && <div className={classes.invalid_feadback}>{error.category}</div>}
