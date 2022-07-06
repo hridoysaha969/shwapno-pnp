@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import Header from "./Header/Header";
 import Body from "./Body/Body";
 import AddProduct from "./Addproduct/AddProduct";
-import './App.css'
-
+import './App.css';
 
 class App extends Component {
 
@@ -18,6 +17,7 @@ class App extends Component {
     })
   }
 
+  /* Delete ssubmited product */
   deleteProduct = (ind) => {
     const productArr = JSON.parse(localStorage.getItem('productObj'));
     productArr.splice(ind, 1);
